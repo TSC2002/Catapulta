@@ -8,7 +8,7 @@ public class Disparo : MonoBehaviour
     public Transform SpawnDeLaBala;
 
     public float FuerzaDeTiro = 1500f;
-    public float FuerzaDeRotacion = 0.5f;
+    public float FuerzaDeTiros = 0.5f;
 
     private float TiempoDeDisparo = 0;
 
@@ -26,7 +26,7 @@ public class Disparo : MonoBehaviour
 
                 NuevaBala.GetComponent<Rigidbody>().AddForce(SpawnDeLaBala.forward * FuerzaDeTiro);
 
-                TiempoDeDisparo = Time.time + FuerzaDeRotacion;
+                TiempoDeDisparo = Time.time + FuerzaDeTiros;
 
                 Destroy(NuevaBala, 2);
             }
